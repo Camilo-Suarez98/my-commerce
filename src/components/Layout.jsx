@@ -13,7 +13,7 @@ import {
 } from 'react-router-dom';
 
 const Layout = () => {
-  const isAuthenticated = useAuth0()
+  const { isAuthenticated } = useAuth0()
 
   return (
     <>
@@ -32,12 +32,12 @@ const Layout = () => {
                   <Profile />
                 </li>
                 <li>
-                  <LoginButton />
+                  <LogoutButton />
                 </li>
               </div> :
               <li>
-              <LogoutButton />
-            </li>
+                <LoginButton />
+              </li>
             }
           </ul>
           <Routes>
