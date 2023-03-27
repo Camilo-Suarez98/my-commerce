@@ -12,7 +12,7 @@ import {
   Link
 } from 'react-router-dom';
 
-const Layout = () => {
+const Layout = ({children}) => {
   const { isAuthenticated } = useAuth0()
 
   return (
@@ -26,18 +26,19 @@ const Layout = () => {
             <li>
               <Link to="./components/products">Products</Link>
             </li>
-            {isAuthenticated ?
-              <div>
+            {
+              isAuthenticated ?
+                <div>
+                  <li>
+                    <Profile />
+                  </li>
+                  <li>
+                    <LogoutButton />
+                  </li>
+                </div> :
                 <li>
-                  <Profile />
+                  <LoginButton />
                 </li>
-                <li>
-                  <LogoutButton />
-                </li>
-              </div> :
-              <li>
-                <LoginButton />
-              </li>
             }
           </ul>
           <Routes>
@@ -46,6 +47,7 @@ const Layout = () => {
           </Routes>
         </div>
       </Router>
+      {children}
     </>
   )
 }
