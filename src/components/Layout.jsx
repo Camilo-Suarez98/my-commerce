@@ -27,10 +27,10 @@ const Layout = () => {
           <nav className='h-10 leading-10'>
             <ul className="App-header flex items-center justify-around">
               <li>
-                <Link to="./components/home">Home</Link>
+                <Link to="./home">Home</Link>
               </li>
               <li>
-                <Link to="./components/products">Products</Link>
+                <Link to="./products">Products</Link>
               </li>
               {
                 isAuthenticated ?
@@ -54,8 +54,8 @@ const Layout = () => {
             </ul>
           </nav>
           <Routes>
-            <Route path='/components/home/*' element={ <Home /> }></Route>
-            <Route path='/components/products/*' element={ <Products /> }></Route>
+            <Route path='/home/*' element={ <Home /> }></Route>
+            <Route path='/products/*' element={ <Products /> }></Route>
           </Routes>
         </div>
       </Router>
