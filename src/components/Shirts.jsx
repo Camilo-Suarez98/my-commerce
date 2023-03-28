@@ -11,7 +11,7 @@ const Shirts = () => {
       <h3>{shirt.description}</h3>
       <p>{shirt.price}</p>
       <p>Available: {shirt.stock}</p>
-      <FontAwesomeIcon icon={faShirt} />
+      <FontAwesomeIcon icon={faShirt} className='h-32' />
     </div>
   )
 }

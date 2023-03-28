@@ -11,7 +11,7 @@ const Bags = () => {
       <h4>{bag.description}</h4>
       <p>{bag.price}</p>
       <p>Available: {bag.stock}</p>
-      <FontAwesomeIcon icon={faShoppingBag} />
+      <FontAwesomeIcon icon={faShoppingBag} className='h-32' />
     </div>
   )
 }

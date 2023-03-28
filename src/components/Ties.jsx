@@ -11,7 +11,7 @@ const Shorts = () => {
       <h4>{tie.description}</h4>
       <p>{tie.price}</p>
       <p>Available: {tie.stock}</p>
-      <FontAwesomeIcon icon={faUserTie} />
+      <FontAwesomeIcon icon={faUserTie} className='h-32' />
     </div>
   )
 }

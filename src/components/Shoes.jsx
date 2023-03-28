@@ -11,7 +11,7 @@ const Shoes = () => {
       <h4>{shoe.description}</h4>
       <p>{shoe.price}</p>
       <p>Available: {shoe.stock}</p>
-      <FontAwesomeIcon icon={faShoePrints} />
+      <FontAwesomeIcon icon={faShoePrints} className='h-32' />
     </div>
   )
 }
