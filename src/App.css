@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #7FBCD2;
-}
-
 .App {
   text-align: center;
   height: 100%;
