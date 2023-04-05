@@ -24,8 +24,8 @@ const Layout = () => {
     <>
       <Router>
         <div className="App w-3/4 m-auto p-4">
-          <nav className='h-10 leading-10'>
-            <ul className="App-header flex items-center justify-around">
+          <nav className='relative h-16 leading-10'>
+            <ul className="App-header absolute top-0 bottom-0 left-0 right-0 flex justify-around">
               <li>
                 <Link to="./">Home</Link>
               </li>
