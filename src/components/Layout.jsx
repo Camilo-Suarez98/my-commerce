@@ -38,7 +38,7 @@ const Layout = () => {
                     <li className='flex items-center'>
                       <Profile />
                       <button className='flex' onClick={showLogOut}>
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
                           keyboard_arrow_down
                         </span>
                       </button>
