@@ -21,10 +21,10 @@ const Products = () => {
 	return (
     <>
       <div className='grid grid-cols-4 place-items-center text-2xl'>
-        <Link to='./shoes'>{wareHouse[0]}</Link>
-        <Link to='./bags'>{wareHouse[1]}</Link>
-        <Link to='./shirts'>{wareHouse[2]}</Link>
-        <Link to='./ties'>{wareHouse[3]}</Link>
+        <Link className='hover:font-bold hover:text-gray-300' to='./shoes'>{wareHouse[0]}</Link>
+        <Link className='hover:font-bold hover:text-gray-300' to='./bags'>{wareHouse[1]}</Link>
+        <Link className='hover:font-bold hover:text-gray-300' to='./shirts'>{wareHouse[2]}</Link>
+        <Link className='hover:font-bold hover:text-gray-300' to='./ties'>{wareHouse[3]}</Link>
       </div>
       <Routes>
         <Route path='/shoes/*' element={ <Shoes /> }></Route>

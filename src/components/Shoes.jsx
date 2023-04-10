@@ -7,7 +7,7 @@ const Shoes = () => {
 
   return (
     <div className='border-gray-200 border-2 rounded-2xl my-6 p-4'>
-      <h2 className='text-2xl'>{shoe.name}</h2>
+      <h2 className='text-2xl font-bold'>{shoe.name}</h2>
       <h4 className='text-xl'>{shoe.description}</h4>
       <p className='text-xl'>${shoe.price}</p>
       <p className='text-xl'>Available: {shoe.stock}</p>
