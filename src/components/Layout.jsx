@@ -23,19 +23,19 @@ const Layout = () => {
   return (
     <>
       <Router>
-        <div className="App w-3/4 m-auto p-4">
+        <div className="App w-3/4 m-auto pt-8 pb-4">
           <nav className='relative h-16 leading-10'>
             <ul className="App-header absolute top-0 bottom-0 left-0 right-0 flex justify-around">
-              <li>
+              <li className='text-xl'>
                 <Link to="./">Home</Link>
               </li>
-              <li>
+              <li className='text-xl'>
                 <Link to="./products">Products</Link>
               </li>
               {
                 isAuthenticated ?
                   <div>
-                    <li className='flex items-center'>
+                    <li className='flex items-center text-xl'>
                       <Profile />
                       <button className='flex' onClick={showLogOut}>
                         <span className="material-symbols-outlined">

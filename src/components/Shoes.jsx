@@ -6,11 +6,11 @@ const Shoes = () => {
   const shoe = items.products[0]
 
   return (
-    <div>
-      <h2>{shoe.name}</h2>
-      <h4>{shoe.description}</h4>
-      <p>{shoe.price}</p>
-      <p>Available: {shoe.stock}</p>
+    <div className='border-gray-200 border-2 rounded-2xl my-6 p-4'>
+      <h2 className='text-2xl'>{shoe.name}</h2>
+      <h4 className='text-xl'>{shoe.description}</h4>
+      <p className='text-xl'>${shoe.price}</p>
+      <p className='text-xl'>Available: {shoe.stock}</p>
       <FontAwesomeIcon icon={faShoePrints} className='h-32' />
     </div>
   )

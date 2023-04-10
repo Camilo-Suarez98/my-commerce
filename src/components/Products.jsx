@@ -20,7 +20,7 @@ const Products = () => {
 
 	return (
     <>
-      <div className='grid grid-cols-4 place-items-center'>
+      <div className='grid grid-cols-4 place-items-center text-2xl'>
         <Link to='./shoes'>{wareHouse[0]}</Link>
         <Link to='./bags'>{wareHouse[1]}</Link>
         <Link to='./shirts'>{wareHouse[2]}</Link>
