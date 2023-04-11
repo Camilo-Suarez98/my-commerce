@@ -1,11 +1,11 @@
 import { useState } from 'react'
 
 export const MoreAndLessButton = ({stockProduct}) => {
-  const [ currentStock, setCurrentStock ] = useState(stockProduct - 1)
-  const [ unititesToBuy, setUnititesToBuy ] = useState(1)
+  const [ currentStock, setCurrentStock ] = useState(stockProduct)
+  const [ unititesToBuy, setUnititesToBuy ] = useState(0)
 
   const lessItem = () => {
-    if (unititesToBuy > 1) {
+    if (unititesToBuy > 0) {
       setCurrentStock(currentStock + 1)
       setUnititesToBuy(unititesToBuy - 1)
     }
@@ -21,10 +21,18 @@ export const MoreAndLessButton = ({stockProduct}) => {
   return (
     <>
       <p className='text-xl pb-3'>Available: {currentStock}</p>
-      <section>
-        <button onClick={lessItem}>-</button>
-        <p>{unititesToBuy}</p>
-        <button onClick={moreItem}>+</button>
+      <section className='flex justify-center'>
+        {
+          unititesToBuy > 0 ?
+            <button className='w-6 text-2xl bg-blue-400 rounded' onClick={lessItem}>-</button> :
+            <button className='w-6 text-2xl bg-blue-400 opacity-80 rounded' disabled onClick={lessItem}>-</button>
+        }
+        <p className='w-6 text-xl'>{unititesToBuy}</p>
+        {
+          currentStock === 0 ?
+          <button className='w-6 text-2xl bg-blue-400 opacity-80 rounded' disabled onClick={moreItem}>+</button> : 
+          <button className='w-6 text-2xl bg-blue-400 rounded' onClick={moreItem}>+</button>
+        }
       </section>
     </>
   )
