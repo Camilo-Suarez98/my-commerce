@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserTie } from '@fortawesome/free-solid-svg-icons'
 import { MoreAndLessButton } from './MoreAndLessButton'
 import { CardItem } from './CardItem'
+import { CartButton } from './CartButton'
 
 const Shorts = () => {
   const tie = items.products[3]
@@ -12,6 +13,7 @@ const Shorts = () => {
       <CardItem name={tie.name} description={tie.description} price={tie.price} />
       <FontAwesomeIcon icon={faUserTie} className='h-32 pt-2' />
       <MoreAndLessButton stockProduct={tie.stock} />
+      <CartButton name={tie.name} />
     </div>
   )
 }

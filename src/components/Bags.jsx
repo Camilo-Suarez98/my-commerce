@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 import { MoreAndLessButton } from './MoreAndLessButton'
 import { CardItem } from './CardItem'
+import { CartButton } from './CartButton'
 
 const Bags = () => {
   const bag = items.products[1]
@@ -12,6 +13,7 @@ const Bags = () => {
       <CardItem name={bag.name} description={bag.description} price={bag.price} />
       <FontAwesomeIcon icon={faShoppingBag} className='h-32' />
       <MoreAndLessButton stockProduct={bag.stock} />
+      <CartButton name={bag.name} />
     </div>
   )
 }
